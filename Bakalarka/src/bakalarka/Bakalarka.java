@@ -5,6 +5,8 @@
  */
 package bakalarka;
 
+import strukurovane.PopulaciaS;
+
 /**
  *
  * @author Ján
@@ -15,7 +17,12 @@ public class Bakalarka {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        Loader loader = new Loader();
+        PopulaciaS ps = new PopulaciaS(10, 30, 0, 0, loader,20);
+        ps.vytvorZaciatocnuPopulaciu();
+        ps.vypisPopulaciu();
+        ps.vytvorElitnuMnozinu(0, 1000000000);
+        ps.aa();
     }
     
 }

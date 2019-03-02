@@ -21,6 +21,7 @@ public class Loader {
     private HashMap<Integer,String> names;
 
     public Loader() {
+        loadFiles();
     }
     
     
@@ -40,7 +41,7 @@ public class Loader {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Loader.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
+        /*
         File f1 = new File("nazvyCentier.txt");
         try {
             Scanner s = new Scanner(f1);
@@ -53,11 +54,11 @@ public class Loader {
             }
         } catch (FileNotFoundException ex) {
             Logger.getLogger(Loader.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        }*/
     }
 
-    public double[][] getDistances() {
-        return distances;
+    public double getVzdialenosti(int x,int y) {
+        return distances[x][y];
     }
 
     public HashMap<Integer, String> getNames() {
