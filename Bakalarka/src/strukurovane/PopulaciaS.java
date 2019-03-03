@@ -24,6 +24,7 @@ public class PopulaciaS {
     private int velkostElitnejMnoziny;
     private int[] elitnaMnozina;
     private double[] ucelovky;
+    private Turnaj turnaj;
 
 
     public PopulaciaS(int pocetKandidatov, int velkostPopulacie, int maxMutacii, double sancaMutacie, Loader loader, double velkostElity) {
@@ -37,6 +38,7 @@ public class PopulaciaS {
         rnd = new Random();
         velkostElitnejMnoziny = (int) ((velkostElity / 100) * velkostPopulacie);
         elitnaMnozina = new int[velkostElitnejMnoziny];
+        turnaj = new Turnaj(velkostPopulacie, pocetKandidatov);
     }
 
     public void vytvorZaciatocnuPopulaciu() {
